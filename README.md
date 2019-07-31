@@ -1,3 +1,5 @@
+###(this repository is no longer being maintained) 
+
 # Agnostic-API
 
 The goal for this project is to provide an agnostic backend-API without sacrificing performance or flexibility.
