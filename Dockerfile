@@ -1,4 +1,3 @@
-
 # Pull from node image
 FROM node
 
