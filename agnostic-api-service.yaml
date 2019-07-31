@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 (06a2e56)
+    service.beta.kubernetes.io/do-loadbalancer-protocol: "http"
+    service.beta.kubernetes.io/do-loadbalancer-algorithm: "round_robin"
+    service.beta.kubernetes.io/do-loadbalancer-tls-ports: "443"
+    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "4267292b-8948-4dae-9c9c-26fd6e6c38d8"
+    service.beta.kubernetes.io/do-loadbalancer-redirect-http-to-https: "true"
+  creationTimestamp: null
+  labels:
+    io.kompose.service: agnostic-api
+  name: agnostic-api
+spec:
+  type: LoadBalancer
+  ports:
+  - name: "80"
+    port: 80
+    targetPort: 3000
+  - name: "443"
+    port: 443
+    targetPort: 3000
+  selector:
+    io.kompose.service: agnostic-api
+status:
+  loadBalancer: {}
