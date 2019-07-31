@@ -32,7 +32,4 @@ exports.ROUTES = {
 };
 
 exports.SCHEMAS = {
-    TOPROCKLABS: "schemas/toprocklabs.js",
-    DEV_DREAMYDC: "schemas/dreamydc.js",
-    DREAMYDC: "schemas/dreamydc.js"
 };
